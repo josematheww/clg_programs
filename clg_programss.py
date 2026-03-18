@@ -1,4 +1,4 @@
-#GCD CALCUALTION 
+# 1 GCD CALCUALTION 
 
 '''
 def gcd(a,b):
@@ -8,7 +8,7 @@ def gcd(a,b):
 print(gcd(98,30))
 '''
 
-# linear search and binary search
+# 2 linear search and binary search
 '''
 
 def linear_search(arr,key):
@@ -35,7 +35,7 @@ print("found" if linear_search(arr,key) != -1 else "not found the element")
 print("found" if bin_ser(arr,key) != -1 else "not found the element")
 
 '''
-#power 
+# 3 power 
 
 '''
 base = int(input("enter the base mof number to calculate poer of that number"))
@@ -47,7 +47,7 @@ print(res)
 
 '''
 
-# to find the maximum of a list
+#4  to find the maximum of a list
 '''
 a=sorted(list((map(int,input('enter the numbers').split()))))
 print(a)
@@ -59,7 +59,7 @@ for i in a:
 print(max)
 '''
 
-#root of a number
+# 5 root of a number
 
 '''
 import math
@@ -72,7 +72,7 @@ for i in range(10):
 print(math.sqrt(n))
 print(x)
 '''
-#selction sort
+# 6 selction sort
 '''
 def selection_sort(arr):
     for i in range(len(arr)):
@@ -96,6 +96,8 @@ def liner_Search(arr):
     
 print(liner_Search(arr=[9,7,6,5,43,2]))
 
+'''
+# 7 merge sort
 '''
 def merge(arr):
     if len(arr) > 1:
@@ -126,3 +128,51 @@ def merge(arr):
             fp+=1
     return arr
 print(merge(arr=[8,7,6,5,4,4,3,2,1]))
+'''
+
+# 8 prime numbers
+'''
+n=int(input("enter the number of prime numbers you want to generate"))
+count=0
+num=2
+while count < n:
+    for i in range(2,int(num**.5) +1):
+        if num % i ==0:
+            break
+    else:
+        print(num , end=" ")
+        count+=1
+    num+=1
+'''
+
+#matrix multiplication
+'''
+a=[[1,2,3],
+   [4,5,6]]
+b=[[1,2],
+   [3,4],
+   [5,6]]
+
+res=[[0,0],
+     [0,0]]
+
+for i in range(len(a)):
+    for j in range(len(b[0])):
+        for k in range(len(b)):
+            res[i][j]+=a[i][k]*b[k][j]
+for i in res:
+    print(i,)
+'''
+
+#count the numebrs of words in the text file
+'''
+import sys
+ 
+if len(sys.argv)!=2:
+    print("enter the proper file modulation")
+else:
+    with open (sys.argv[1], 'r') as f:
+        text=f.read()
+        word=len(text.split())
+print(word)
+'''
