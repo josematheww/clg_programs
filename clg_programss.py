@@ -73,7 +73,7 @@ print(math.sqrt(n))
 print(x)
 '''
 #selction sort
-
+'''
 def selection_sort(arr):
     for i in range(len(arr)):
         mid=i
@@ -95,3 +95,34 @@ def liner_Search(arr):
     return arr    
     
 print(liner_Search(arr=[9,7,6,5,43,2]))
+
+'''
+def merge(arr):
+    if len(arr) > 1:
+        mid=len(arr)//2
+        left=arr[:mid]
+        right=arr[mid:]
+        merge(left)
+        merge(right)
+
+        lp=rp=fp=0
+
+        while lp < len(left) and rp < len(right):
+            if left[lp] < right[rp]:
+                arr[fp]=left[lp]
+                lp=lp=1
+            else:
+                arr[fp]=right[rp]
+                rp+=1
+                fp+=1
+
+        while lp < len(left):
+            arr[fp]=left[lp]
+            lp+=1
+            fp+=1
+        while rp < len(left):
+            arr[fp]=right[rp]
+            rp+=1
+            fp+=1
+    return arr
+print(merge(arr=[8,7,6,5,4,4,3,2,1]))
